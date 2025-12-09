@@ -10,9 +10,6 @@ docker compose up -d
 
 # Verify health
 curl http://localhost:8080/actuator/health
-
-# Run E2E tests
-./e2e-test.sh
 ```
 
 ## API Endpoints
@@ -225,9 +222,6 @@ Environment variables:
 # Build
 ./mvnw clean package -DskipTests
 
-# Run tests
-./mvnw test
-
 # Run locally (requires PostgreSQL and Redis)
 ./mvnw spring-boot:run
 ```
@@ -250,7 +244,3 @@ docker compose down
 # Clean volumes
 docker compose down -v
 ```
-
-## Documentation
-
-See `docs/` directory for detailed documentation.
